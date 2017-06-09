@@ -1,0 +1,27 @@
+{
+    "name": "greywizard/phpucd",
+    "description": "Unsafe code detector",
+    "type": "library",
+    "bin": ["bin/phpucd"],
+    "require": {
+        "php": "^5.5 || ^7.0",
+        "symfony/console": "^3.2.7",
+        "symfony/finder": "^3.2.7"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8.35"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bartłomiej Krukowski",
+            "email": "bkrukowski@greywizard.com"
+        }
+    ],
+    "autoload": {
+        "files": ["src/functions.inc.php"],
+        "psr-4": {
+            "Greywizard\\Phpucd\\": "src/"
+        }
+    }
+}

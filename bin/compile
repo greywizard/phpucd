@@ -1,0 +1,12 @@
+#!/usr/bin/env php
+<?php
+
+use Greywizard\Phpucd\Console\Application;
+use Greywizard\Phpucd\Console\CompilerCommand;
+use Symfony\Component\Console\Input\ArgvInput;
+
+require_once __DIR__ . DIRECTORY_SEPARATOR . 'init.php';
+
+$application = new Application();
+$application->add(new CompilerCommand());
+$application->run(new ArgvInput([__FILE__, CompilerCommand::COMMAND_NAME]));
